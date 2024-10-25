@@ -8,8 +8,16 @@
     </head>
 <body>
     <header>
-        <h1>Portfolio de Perrien Anthony</h1>
+        <div class="MenuButtonContainer">
+            <img src="./img/pulsar_live.png">
+            <div class="MenuButton" href="pages/games.html">Home</div>
+            <a class="MenuButton" href="pages/games.html">Games</a>
+            <a class="MenuButton" href="pages/games.html">Programming</a>
+            <a class="MenuButton" href="pages/games.html">3D Modeling</a>
+            <a class="MenuButton" href="pages/games.html">About</a>
+        </div>
     </header>
+    
     <main>
         <h2>À propos de moi</h2>
         <p>Bonjour! Je m'appelle Perrien Anthony</p>
@@ -20,7 +28,7 @@
         <p>Téléphone : <span id="phone-number"></span></p>
 
         <h2>Thèmes</h2>
-        <input type="image" src="github_logo.png" alt="Github" width="100" height="100" onclick="window.location.href='https://github.com/nyantho29';">
+        <input type="image" src="./img/github_logo.png" alt="Github" width="100" height="100" onclick="window.location.href='https://github.com/nyantho29';">
 
         
 
@@ -32,11 +40,10 @@
         <!-- <button onclick="changeTheme('theme-dark')">Sombre</button> -->
         <!-- <button onclick="changeTheme('theme-blue')">Bleu</button> -->
 
-        <label class="night_day_switch">
+        <label id="night_day_switch" class="night_day_switch">
             <input type="checkbox">
             <span class="slider round"></span>
         </label>
-
     </footer>
     <script src="script.js"></script>
 </body>

@@ -1,115 +1,150 @@
+/* Définition des thèmes */
 .theme-default {
-    --background-color: #f4f4f4;
-    --header-background-color: #b50079;
-    --header-text-color: white;
-    --main-background-color: white;
-    --main-text-color: black;
-    --footer-background-color: #b50079;
-    --footer-text-color: white;
+  --background-color: #f4f4f4;
+  --header-background-color: #000000;
+  --header-text-color: white;
+  --main-background-color: rgb(0, 0, 0);
+  --main-text-color: black;
+  --footer-background-color: #b50079;
+  --footer-text-color: white;
 }
 
 .theme-dark {
-    --background-color: #333;
-    --header-background-color: #4c0133;
-    --header-text-color: white;
-    --main-background-color: #444;
-    --main-text-color: white;
-    --footer-background-color: #4c0133;
-    --footer-text-color: white;
+  --background-color: #333;
+  --header-background-color: #000000;
+  --header-text-color: white;
+  --main-background-color: #444;
+  --main-text-color: white;
+  --footer-background-color: #4c0133;
+  --footer-text-color: white;
 }
 
 /* Application des variables de thème */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  
 }
 
+/* Menu Button Container */
+.MenuButtonContainer {
+  display: flex;           /* Utilisation de flexbox pour aligner les éléments horizontalement */
+  justify-content: space-between;
+  align-items: left;      /* Alignement vertical centré */
+  width:fit-content;
+
+}
+
+/* Ajustement du logo */
+.MenuButtonContainer img {
+  height: 60px;             /* Ajustez cette valeur pour qu'elle corresponde à la hauteur des boutons */
+  width: auto;              /* Conserve les proportions du logo */
+}
+
+/* Menu Buttons */
+.MenuButton {
+  padding: 20px;
+  flex: 1;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-wrap:nowrap;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;             /* Définit une hauteur fixe pour les boutons */
+}
+
+.MenuButton:hover {
+  background-color: #ccc;   /* Change la couleur au survol */
+}
+
+
 header {
-    background-color: var(--header-background-color);
-    color: var(--header-text-color);
-    text-align: center;
-    padding: 1em 0;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  text-align: center;
 }
 
 main {
-    padding: 20px;
-    margin: 20px;
-    background-color: var(--main-background-color);
-    color: var(--main-text-color);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: var(--footer-background-color);
-    color: var(--footer-text-color);
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: inline-block;
 }
 
 .night_day_switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
 }
 
 /* Hide default HTML checkbox */
 .night_day_switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+opacity: 0;
+width: 0;
+height: 0;
 }
 
 /* The slider */
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+background-color: #2196F3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+transform: translateX(26px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+border-radius: 50%;
 }
