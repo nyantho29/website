@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+    <main>
+        <h2>À propos de moi</h2>
+        <p>Bonjour! Je m'appelle Perrien Anthony</p>
+        
+        <h2>Contact</h2>
+        <p>Vous pouvez me contacter à l'adresse suivante :</p>
+        <p>Email : <span id="mail-address"></span></p>
+        <p>Téléphone : <span id="phone-number"></span></p>
+
+        <h2>Thèmes</h2>
+        <input type="image" src="github_logo.png" alt="Github" width="100" height="100" onclick="window.location.href='https://github.com/nyantho29';">
+
+        
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Perrien Anthony. Tous droits réservés.</p>
+        
+        <!-- <button onclick="changeTheme('theme-default')">Défaut</button> -->
+        <!-- <button onclick="changeTheme('theme-dark')">Sombre</button> -->
+        <!-- <button onclick="changeTheme('theme-blue')">Bleu</button> -->
+
+        <label class="night_day_switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
